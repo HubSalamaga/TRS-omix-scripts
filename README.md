@@ -31,7 +31,8 @@ The content of the repository is derived from its predecessor, available at:
 > [!WARNING]
 > 3. **Compilation of TRS-wrapper**: (Request to Mr. Rafal for the exact script needed for compilation)
 
-4. **Usage of `TRS_and_fasta_revised.py`**: This script is used to obtain initial results for subsequent BLAST analysis. Detailed operation described below.
+> [!NOTE]
+> 4. **Usage of `TRS_and_fasta_revised.py`**: This script is used to obtain initial results for subsequent BLAST analysis. Detailed operation described below.
 
 ### TRS_and_fasta_revised.py
 
