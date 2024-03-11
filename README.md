@@ -1,5 +1,3 @@
-# Preparing the content for the markdown file with specified instructions and formatting details
-markdown_content = """
 # TRS-omix: Search Engine
 
 This code accompanies the paper:
