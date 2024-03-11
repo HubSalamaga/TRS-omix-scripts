@@ -25,6 +25,7 @@ The content of the repository is derived from its predecessor, available at:
    
    Quick installation command in terminal: `conda create env -f environment.yml -n TRS`
 
+> [!IMPORTANT]
 > 2. **Activate Environment**: Use `conda activate TRS`. All further operations should be performed in this environment.
 
 > [!WARNING]
