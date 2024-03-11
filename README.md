@@ -64,10 +64,3 @@ The content of the repository is derived from its predecessor, available at:
 
 14. These files should then be BLASTed against the nt database with parameters `perc_identity 100 -outfmt 6`.
 """
-
-# Saving the markdown content to a file
-output_file_path = "/mnt/data/README_formatted.md"
-with open(output_file_path, "w") as file:
-    file.write(markdown_content)
-
-output_file_path
