@@ -10,8 +10,8 @@ The content of the repository is derived from its predecessor, available at:
 ## ToDo's:
 
 ### Simple Tasks
-[!NOTE]
-1. **Sequence Flanking Correction**: Add flanking sequences (`*CGACGACGACG*`) analogously on the right side.
+> [!NOTE]
+> 1. **Sequence Flanking Correction**: Add flanking sequences (`*CGACGACGACG*`) analogously on the right side.
 
 2. **Batch File for Genome List**: Upon program startup, the batch file should contain a list of genomes with arbitrary genome file names.
 
