@@ -10,8 +10,8 @@ The content of the repository is derived from its predecessor, available at:
 ## ToDo's:
 
 ### Simple Tasks
-> [!NOTE]
-> 1. **Sequence Flanking Correction**: Add flanking sequences (`*CGACGACGACG*`) analogously on the right side.
+
+1. **Sequence Flanking Correction**: Add flanking sequences (`*CGACGACGACG*`) analogously on the right side.
 
 2. **Batch File for Genome List**: Upon program startup, the batch file should contain a list of genomes with arbitrary genome file names.
 
@@ -20,14 +20,15 @@ The content of the repository is derived from its predecessor, available at:
 4. **Sequence Similarity in `interiors.txt` ("Interiors")**: Address similarity of sequences within `interiors.txt`.
 
 ## Operating Mechanism
-
-1. **Environment Setup with Conda**: The necessary package list for script operation is in `environment.yml`.
+> [!IMPORTANT]
+> 1. **Environment Setup with Conda**: The necessary package list for script operation is in `environment.yml`.
    
    Quick installation command in terminal: `conda create env -f environment.yml -n TRS`
 
-2. **Activate Environment**: Use `conda activate TRS`. All further operations should be performed in this environment.
+> 2. **Activate Environment**: Use `conda activate TRS`. All further operations should be performed in this environment.
 
-3. **Compilation of TRS-wrapper**: (Request to Mr. Rafal for the exact script needed for compilation)
+> [!WARNING]
+> 3. **Compilation of TRS-wrapper**: (Request to Mr. Rafal for the exact script needed for compilation)
 
 4. **Usage of `TRS_and_fasta_revised.py`**: This script is used to obtain initial results for subsequent BLAST analysis. Detailed operation described below.
 
