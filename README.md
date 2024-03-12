@@ -55,7 +55,7 @@ The content of the repository is derived from its predecessor, available at:
 
 > [!IMPORTANT]
 > 6. TRS output is saved in the `TRS_output` folder, with an equivalent to `interiors.txt` from TRS-omix csv file named:
-
+>
 >   `inputdirectory_results.csv`
 
 
@@ -67,15 +67,21 @@ The content of the repository is derived from its predecessor, available at:
 
 It's best if the `.fasta` files originate from NCBI Nucleotide for compatibility.
 
-14. Extracted sequence fragments are saved to a `.fasta` file named "combined_sequences.fasta", with sequences named according to the scheme: `Species_name_L/R{number}`.
+9. Extracted sequence fragments are saved to a `.fasta` file named "combined_sequences.fasta", with sequences named according to the scheme:
 
-15. Each L/R pair receives a number scheme `Species_name_L/R{number}_{pair_number}`, and sequences are saved to `combined_sequences_unique.fasta`.
+   `Species_name_L/R{number}`
 
-16. Subsequent operations include clustering with cd-hit (automated if cd-hit is installed or will prompt for path if not found) and setting the desired identity degree.
+   Number accompanying L/R are encoded trinucleotide repeats 
 
-17. The script also performs operations on clusters to clean them and obtain sequence IDs to be discarded. cd-hit results are located in the `cd-hit results` folder.
+10. Each L/R pair receives a number indicating a pair `Species_name_L/R{number}_{pair_number}`, and sequences are saved to `combined_sequences_unique.fasta`.
 
-18. Two new fasta files are created in the `filtered_sequences` folder, one containing sequences within clusters and another outside them.
+> [!IMPORTANT]
+> 11. Subsequent operations include clustering with cd-hit (automated if cd-hit is installed or will prompt for path if not found) and setting the desired identity degree.
+> Note that this is one of the most time consuming processes in the current script but highly dependent on desired identity threshold, longest for 0.75 **_very_ short** for 1.0 
 
-19. These files should then be BLASTed against the nt database with parameters `perc_identity 100 -outfmt 6`.
+18. The script also performs operations on clusters to clean them and obtain sequence IDs to be discarded. cd-hit results are located in the `cd-hit results` folder.
+
+19. Two new fasta files are created in the `filtered_sequences` folder, one containing sequences within clusters and another outside them.
+
+20. These files should then be BLASTed against the nt database with parameters `perc_identity 100 -outfmt 6`.
 """
