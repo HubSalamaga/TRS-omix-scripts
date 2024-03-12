@@ -43,7 +43,7 @@ The content of the repository is derived from its predecessor, available at:
 > [!IMPORTANT]
 > 3. Creates a new path in the folder where the script is located, named according to pattern inputdirectory_results. This path will contain all files generated during analysis, dynamically changing to include information about the experiment.
 
-> [!WARNING]
+> [!CAUTION]
 > 4. Do not modify this folder in any way. Files within it can be copied elsewhere, but the original location and file names must be preserved—at least for now.
 
 > [!NOTE]
