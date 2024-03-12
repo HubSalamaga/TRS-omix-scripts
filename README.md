@@ -26,7 +26,7 @@ The content of the repository is derived from its predecessor, available at:
    Quick installation command in terminal: `conda create env -f environment.yml -n TRS`
 
 > [!IMPORTANT]
-> 2. **Activate Environment**: Use `conda activate TRS`. All further operations should be performed in this environment.
+> 2. **Activate Environment**: Use `conda activate TRS`. **All further operations should be performed in this environment**.
 
 > [!WARNING]
 > 3. **Compilation of TRS-wrapper**: (Request to Mr. Rafal for the exact script needed for compilation)
@@ -41,15 +41,19 @@ The content of the repository is derived from its predecessor, available at:
 2. Queries additional parameters to be used in TRS-omix (minimum and maximum length, mode).
 
 > [!IMPORTANT]
-> 3. Creates a new path in the folder where the script is located, named according to pattern inputdirectory_results. This path will contain all files generated during analysis, dynamically changing to include information about the experiment.
+> 3. Creates a new path in the folder where the script is located, named according to pattern:
+> 
+>  `inputdirectory_results`
+> 
+> This path will contain all files generated during analysis, dynamically changing to include information about the experiment.
 
 > [!CAUTION]
-> 4. Do not modify this folder in any way. Files within it can be copied elsewhere, but the original location and file names must be preserved—at least for now.
+> 4. **Do not modify this folder in _any_ way**. Files within it can be copied elsewhere, but the original location and file names must be preserved—at least for now.
 
 > [!NOTE]
 > 5. Upon specifying required parameters and creating the folder, TRS-omix operates, typically taking 1-1.5 hours for 7 genomes. The analysis duration also depends on the maximum length parameter.
 
-6. TRS output is saved in the `TRS_output` folder, with an equivalent to `interiors.txt` always named `${\color{red}specified_folder_name}_results.csv`.
+6. TRS output is saved in the `TRS_output` folder, with an equivalent to `interiors.txt` from TRS-omix always named ``.
 
 7. The script then asks how much of the sequence start and end the user wants to extract, with maximum length limited by the minimum sequence length. If the user specifies a value beyond the accepted maximum, they will be informed, and the length will be adjusted.
 
