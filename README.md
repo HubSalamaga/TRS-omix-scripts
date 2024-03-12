@@ -40,11 +40,14 @@ The content of the repository is derived from its predecessor, available at:
 
 2. Queries additional parameters to be used in TRS-omix (minimum and maximum length, mode).
 
-3. Creates a new path in the folder where the script is located, named ${\textsf{\color{red}specified \space folder \space name}}$. This path will contain all files generated during analysis, dynamically changing to include information about the experiment.
+> [!IMPORTANT]
+> 3. Creates a new path in the folder where the script is located, named according to pattern inputdirectory_results. This path will contain all files generated during analysis, dynamically changing to include information about the experiment.
 
-4. **Important**: Do not modify this folder in any way. Files within it can be copied elsewhere, but the original location and file names must be preserved—at least for now.
+> [!WARNING]
+> 4. Do not modify this folder in any way. Files within it can be copied elsewhere, but the original location and file names must be preserved—at least for now.
 
-5. Upon specifying required parameters and creating the folder, TRS-omix operates, typically taking 1-1.5 hours for 7 genomes. The analysis duration also depends on the maximum length parameter.
+> [!NOTE]
+> 5. Upon specifying required parameters and creating the folder, TRS-omix operates, typically taking 1-1.5 hours for 7 genomes. The analysis duration also depends on the maximum length parameter.
 
 6. TRS output is saved in the `TRS_output` folder, with an equivalent to `interiors.txt` always named `${\color{red}specified_folder_name}_results.csv`.
 
