@@ -11,13 +11,19 @@ The content of the repository is derived from its predecessor, available at:
 
 ### Simple Tasks
 
-1. **Sequence Flanking Correction**: Add flanking sequences (`*CGACGACGACG*`) analogously on the right side.
+1. **Sequence Flanking Correction**: Add flanking sequences (`*CGACGACGACG*`) analogously on the right side. 
 
-2. **Batch File for Genome List**: Upon program startup, the batch file should contain a list of genomes with arbitrary genome file names.
+2. **Batch File for Genome List**: Upon program startup, the batch file should contain a list of genomes with arbitrary genome file names. ****KIND OF SOLVED**** CURRENT IMPLEMENTATNION ASKS FOR PATH AND READS .FASTA FILES LOCATED THERE 
 
-3. **FRG NO Column in Output**: Currently manually generated and needs automation. It should contain a string from the fasta file header (`>..." "`) with a prefix-index.
+3. **FRG NO Column in Output**: Currently manually generated and needs automation. It should contain a string from the fasta file header (`>..." "`) with a prefix-index. ****SOLVED****
 
-4. **Sequence Similarity in `interiors.txt` ("Interiors")**: Address similarity of sequences within `interiors.txt`.
+4. **Sequence Similarity in `interiors.txt` ("Interiors")**: Address similarity of sequences within `interiors.txt`. - ****SOLVED***
+
+5.**Run script with args instead of user input** : Current implementation has low scalability
+
+6.**Introduce a way to resume processing from the last completed step** : Find crucial points in pipeline, after their completion add currently stored variables and info about present files to .json (or other format). Bonus points with args we should instantly know what the name of the folder *should be* so we can instantly do a search (function for it is present) and prompt the user for folder if we find multiple (we are using fnmatch) if .json is found load it. The problem here is that i have no experience with something like this so I'll need help with creating the logic behind it. 
+
+7.**Testing** - the current script was run on limited number of samples from klebsiella, avium, ecoli and citrobacter genomes. We need to test it's capabilities especially after introduction of automated dictionary creation and update. I wrote a short script that downloads a specified number of genomes from a given genus I will include it here. 
 
 ## Operating Mechanism
 > [!IMPORTANT]
