@@ -21,11 +21,15 @@ The content of the repository is derived from its predecessor, available at:
 
 5.**Run script with args instead of user input** : Current implementation has low scalability
 
-6.**Introduce a way to resume processing from the last completed step** : Find crucial points in pipeline, after their completion add currently stored variables and info about present files to .json (or other format). Bonus points with args we should instantly know what the name of the folder *should be* so we can instantly do a search (function for it is present) and prompt the user for folder if we find multiple (we are using fnmatch) if .json is found load it. The problem here is that i have no experience with something like this so I'll need help with creating the logic behind it. 
+### Advanced
 
-7.**Testing** - the current script was run on limited number of samples from klebsiella, avium, ecoli and citrobacter genomes. We need to test it's capabilities especially after introduction of automated dictionary creation and update. I wrote a short script that downloads a specified number of genomes from a given genus I will include it here. 
+1.**Introduce a way to resume processing from the last completed step** : Find crucial points in pipeline, after their completion add currently stored variables and info about present files to .json (or other format). Bonus points with args we should instantly know what the name of the folder *should be* so we can instantly do a search (function for it is present) and prompt the user for folder if we find multiple (we are using fnmatch) if .json is found load it. The problem here is that i have no experience with something like this so I'll need help with creating the logic behind it. 
 
-## Operating Mechanism
+2.**Testing** - the current script was run on limited number of samples from klebsiella, avium, ecoli and citrobacter genomes. We need to test it's capabilities especially after introduction of automated dictionary creation and update. I wrote a short script that downloads a specified number of genomes from a given genus I will include it here. 
+
+3. **Multithreadding** - good idea would be to figure out how to multithread currently present function and test how it goes then rewrite for args
+
+# Operating Mechanism
 > [!IMPORTANT]
 > 1. **Environment Setup with Conda**: The necessary package list for script operation is in `environment.yml`.
    
@@ -40,7 +44,16 @@ The content of the repository is derived from its predecessor, available at:
 > [!NOTE]
 > 4. **Usage of `TRS_and_fasta_revised.py`**: This script is used to obtain initial results for subsequent BLAST analysis. Detailed operation described below.
 
-### TRS_and_fasta_revised.py
+5. **Proceed with BLASTING the obtained** `.fasta` sequences against nt database with tabular output format and 100% identity.
+
+> [!CAUTION]
+> # ****DO NOT REMOVE/MOVE THE DIRECTORY CREATED BY `TRS_and_fasta_revised.py`****  
+
+6. **Move BLAST results** to blast_output directory (should already be created) in the directory `TRS_and_fasta_revised.py` created.
+
+7.**Usage of `BLAST_part_revised.py`**: This script    
+
+## TRS_and_fasta_revised.py
 
 1. Asks the user for the location of the folder containing `.fasta` files. Full path specification is recommended.
 
