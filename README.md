@@ -53,21 +53,29 @@ The content of the repository is derived from its predecessor, available at:
 > [!NOTE]
 > 5. Upon specifying required parameters and creating the folder, TRS-omix operates, typically taking 1-1.5 hours for 7 genomes. The analysis duration also depends on the maximum length parameter.
 
-6. TRS output is saved in the `TRS_output` folder, with an equivalent to `interiors.txt` from TRS-omix always named ``.
+> [!IMPORTANT]
+> 6. TRS output is saved in the `TRS_output` folder, with an equivalent to `interiors.txt` from TRS-omix csv file named:
+
+>   `inputdirectory_results.csv`
+
 
 7. The script then asks how much of the sequence start and end the user wants to extract, with maximum length limited by the minimum sequence length. If the user specifies a value beyond the accepted maximum, they will be informed, and the length will be adjusted.
 
-8. Users are asked for their email to use Entrez and the `GENOME` column in `${\color{red}specified_folder_name}_results.csv` to obtain organism names. It's best if the `.fasta` files originate from NCBI Nucleotide for compatibility.
+8. Users are asked for their email which will be used to obtain organism names along with `GENOME` columm of:
+   
+   `inputdirectory_results.csv`
 
-9. Extracted sequence fragments are saved to a `.fasta` file named "combined_sequences.fasta", with sequences named according to the scheme: `Species_name_L/R{number}`.
+It's best if the `.fasta` files originate from NCBI Nucleotide for compatibility.
 
-10. Each L/R pair receives a number scheme `Species_name_L/R{number}_{pair_number}`, and sequences are saved to `combined_sequences_unique.fasta`.
+14. Extracted sequence fragments are saved to a `.fasta` file named "combined_sequences.fasta", with sequences named according to the scheme: `Species_name_L/R{number}`.
 
-11. Subsequent operations include clustering with cd-hit (automated if cd-hit is installed or will prompt for path if not found) and setting the desired identity degree.
+15. Each L/R pair receives a number scheme `Species_name_L/R{number}_{pair_number}`, and sequences are saved to `combined_sequences_unique.fasta`.
 
-12. The script also performs operations on clusters to clean them and obtain sequence IDs to be discarded. cd-hit results are located in the `cd-hit results` folder.
+16. Subsequent operations include clustering with cd-hit (automated if cd-hit is installed or will prompt for path if not found) and setting the desired identity degree.
 
-13. Two new fasta files are created in the `filtered_sequences` folder, one containing sequences within clusters and another outside them.
+17. The script also performs operations on clusters to clean them and obtain sequence IDs to be discarded. cd-hit results are located in the `cd-hit results` folder.
 
-14. These files should then be BLASTed against the nt database with parameters `perc_identity 100 -outfmt 6`.
+18. Two new fasta files are created in the `filtered_sequences` folder, one containing sequences within clusters and another outside them.
+
+19. These files should then be BLASTed against the nt database with parameters `perc_identity 100 -outfmt 6`.
 """
