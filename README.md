@@ -17,7 +17,7 @@ The content of the repository is derived from its predecessor, available at:
 
 3. **FRG NO Column in Output**: Currently manually generated and needs automation. It should contain a string from the fasta file header (`>..." "`) with a prefix-index. ****SOLVED****
 
-4. **Sequence Similarity in `interiors.txt` ("Interiors")**: Address similarity of sequences within `interiors.txt`. - ****SOLVED***
+4. **Sequence Similarity in `interiors.txt` ("Interiors")**: Address similarity of sequences within `interiors.txt`. - ****SOLVED****
 
 5.**Run script with args instead of user input** : Current implementation has low scalability
 
